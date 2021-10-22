@@ -32,8 +32,8 @@ const routes = [
       {
         path: "/articles",
         name: "Articles",
-        meta:{
-          menu:"文章",
+        meta: {
+          menu: "文章管理",
           icon: "el-icon-s-home",
         },
         component: RouteView,
@@ -42,7 +42,7 @@ const routes = [
             path: "/articles/edit",
             name: "Edit",
             meta: {
-              menu: "文章修改",
+              menu: "新增文章",
 
             },
             component: () => import("@/views/sys/articles/edit.vue"),
@@ -62,7 +62,7 @@ const routes = [
         path: "/audit",
         name: "Audit",
         meta: {
-          menu: "审核",
+          menu: "审核管理",
           icon: "el-icon-s-home",
         },
         component: () => import("@/views/sys/audit"),
@@ -89,7 +89,7 @@ const routes = [
         path: "/menus",
         name: "Menus",
         meta: {
-          menu: "菜单",
+          menu: "菜单管理",
           icon: "el-icon-s-home",
         },
         component: () => import("@/views/sys/menus"),
@@ -98,7 +98,7 @@ const routes = [
         path: "/roles",
         name: "Roles",
         meta: {
-          menu: "权限",
+          menu: "权限管理",
           icon: "el-icon-s-home",
         },
         component: () => import("@/views/sys/roles"),
@@ -106,13 +106,18 @@ const routes = [
       {
         path: "/user",
         name: "User",
-
         meta: {
-          menu: "用户",
+          menu: "用户管理",
           icon: "el-icon-s-home",
         },
         component: () => import("@/views/sys/user"),
       },
+      {
+        path: "/mine",
+        name: "Mine",
+        hide: true,
+        component: () => import("@/views/sys/mine"),
+      }
     ],
   },
 ];

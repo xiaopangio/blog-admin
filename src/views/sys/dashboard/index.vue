@@ -1,8 +1,47 @@
 <template>
-    <div>首页</div>
+  <div>
+    <Breadcrumb></Breadcrumb>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+    <h1>dashboard</h1>
+  </div>
 </template>
 <script>
-export default {}
+import Breadcrumb from "@/components/Breadcrumb.vue";
+export default {
+  components: {
+    Breadcrumb,
+  },
+};
 </script>
-<style>
-</style>
+<style></style>

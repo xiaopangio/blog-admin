@@ -30,15 +30,23 @@
         </div>
       </div>
     </el-col>
-    <el-drawer size="10%" :with-header="false" v-model="drawer" direction="rtl" ref="drawer">
-        <div class="cursor">
+    <el-drawer
+      size="10%"
+      :with-header="false"
+      v-model="drawer"
+      direction="rtl"
+      ref="drawer"
+    >
+      <div class="drawer">
+        <div class="cursor" @click="toMine">
           <i class="el-icon-user"></i>
           <span>个人中心</span>
         </div>
-        <div class="cursor" >
+        <div class="cursor" @click="logout">
           <i class="el-icon-switch-button"></i>
-          <span>登出</span>
+          <span>注销</span>
         </div>
+      </div>
     </el-drawer>
   </el-row>
 </template>
@@ -80,7 +88,7 @@ export default {
       }
     },
     toMine() {
-      this.$refs.drawer.closeDrawer();
+      this.$refs.drawer.handleClose();
       this.$router.push("/mine");
     },
     logout() {
@@ -110,11 +118,11 @@ export default {
 }
 .drawer {
   height: 100%;
-  padding: 20px;
+  padding: 0 18px;
   > div {
     text-align: left;
     > span {
-      margin-left: 20px;
+      margin-left: 10px;
     }
   }
 }

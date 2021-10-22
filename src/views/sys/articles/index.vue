@@ -1,8 +1,15 @@
 <template>
-    <div>文章列表</div>
+  <div>
+    <breadcrumb></breadcrumb>
+    文章列表
+  </div>
 </template>
 <script>
-export default {}
+import Breadcrumb from "@/components/Breadcrumb.vue";
+export default {
+  components: {
+    Breadcrumb,
+  },
+};
 </script>
-<style>
-</style>
+<style></style>
