@@ -8,13 +8,6 @@
   </el-breadcrumb>
 </template>
 <script>
-export default {
-  computed: {
-    route() {
-      console.log(this.$route);
-      return 1;
-    },
-  },
-};
+export default {};
 </script>
 <style></style>

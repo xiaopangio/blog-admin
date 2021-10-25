@@ -39,4 +39,12 @@ export function app_userInfo(id) {
     method: "get",
   });
 }
+// 更新用户信息
+export function app_update_userInfo(id, data) {
+  return request({
+    url: `${URL.userInfo}/${id}`,
+    method: "put",
+    data
+  });
+}
 
