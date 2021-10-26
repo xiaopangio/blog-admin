@@ -11,7 +11,7 @@
     </el-col>
     <!-- 时间 -->
     <el-col class="time" :span="4">{{ time }}</el-col>
-    <el-col :span="3" :offset="15">
+    <el-col :span="5" :offset="13">
       <div class="setting-box">
         <!-- 需要一个默认头像 -->
         <img
