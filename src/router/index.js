@@ -34,9 +34,10 @@ const routes = [
         name: "Articles",
         meta: {
           menu: "文章管理",
-          icon: "el-icon-s-home",
+          icon: "el-icon-document",
         },
         component: RouteView,
+        redirect: "/articles/list",
         children: [
           {
             path: "/articles/edit",
@@ -63,7 +64,7 @@ const routes = [
         name: "Audit",
         meta: {
           menu: "审核管理",
-          icon: "el-icon-s-home",
+          icon: "el-icon-document-checked",
         },
         component: () => import("@/views/sys/audit"),
       },
@@ -72,7 +73,7 @@ const routes = [
         name: "Category",
         meta: {
           menu: "分类管理",
-          icon: "el-icon-s-home",
+          icon: "el-icon-s-grid",
         },
         component: () => import("@/views/sys/category"),
       },
@@ -81,7 +82,7 @@ const routes = [
         name: "Draft",
         meta: {
           menu: "草稿箱",
-          icon: "el-icon-s-home",
+          icon: "el-icon-folder",
         },
         component: () => import("@/views/sys/draft"),
       },
@@ -90,7 +91,7 @@ const routes = [
         name: "Menus",
         meta: {
           menu: "菜单管理",
-          icon: "el-icon-s-home",
+          icon: "el-icon-menu",
         },
         component: () => import("@/views/sys/menus"),
       },
@@ -108,7 +109,7 @@ const routes = [
         name: "User",
         meta: {
           menu: "用户管理",
-          icon: "el-icon-s-home",
+          icon: "el-icon-user",
         },
         component: () => import("@/views/sys/user"),
       },

@@ -51,9 +51,9 @@
     </el-table>
     <el-pagination
       class="pagination"
-      :currentPage="currentPage1"
+      :currentPage="page.pageNum"
       :page-sizes="[10, 20, 30, 40]"
-      :page-size="10"
+      :page-size="page.pageSize"
       layout="total,sizes, prev, pager, next,jumper"
       :total="total"
       @size-change="handleSizeChange"
@@ -89,8 +89,20 @@ export default {
     this.init();
   },
   methods: {
-    init() {
-      apiList[this.options.api](this.page).then((res) => {
+    init(key, keyword) {
+      this.page = {
+        pageSize: 10,
+        pageNum: 1,
+      };
+      this.getList(key, keyword);
+    },
+    getList(key, keyword) {
+      const data = { ...this.page };
+      if (key) {
+        data.key = key;
+        data.keyword = keyword;
+      }
+      apiList[this.options.api](data).then((res) => {
         this.tableData = res.data.rows;
         this.total = res.data.count;
       });
@@ -109,11 +121,11 @@ export default {
     },
     handleSizeChange(val) {
       this.page.pageSize = val;
-      this.init();
+      this.getList();
     },
     handleCurrentChange(val) {
       this.page.pageNum = val;
-      this.init();
+      this.getList();
     },
   },
 };

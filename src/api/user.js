@@ -13,7 +13,7 @@ export function user_create(data) {
     return request({
         url,
         method: "post",
-        params: data
+        data
     })
 }
 //删除用户 
